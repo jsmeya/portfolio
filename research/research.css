@@ -1,0 +1,83 @@
+:root {
+    --dark-color: #323232;
+    --accent-color: #B97DFF;
+    --lighter-color: #5A5A5A;
+
+    /* Gradients */
+    --color-one: #7D87FF;
+    --color-two: var(--accent-color);
+    --color-three: #FFAF7D;
+}
+
+@media screen and (min-width: 375px) {
+    
+    .project {
+        margin-bottom: 10rem;
+    }
+
+    .project-image {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+
+        margin: 0;
+        margin-bottom: 0.75rem;
+    }
+
+    .project-subtitle {
+        font-size: 1rem;
+        line-height: 1.6rem;
+        font-weight: 500;
+
+        margin: 0;
+    }
+
+    .project a {
+        display: block;
+        margin-top: 2rem;
+        padding: 0.5rem;
+
+        text-align: center;
+        text-decoration: none;
+        line-height: 1.6rem;
+        font-size: 0.75rem;
+
+        color: #FFFFFF;
+        background-color: var(--dark-color);
+        border-radius: 0.25rem;
+    }
+
+    .project-divider {
+        border: none;
+        height: 0;
+        background-color: var(--lighter-color);
+        width: 50%;
+
+        margin: 6rem auto;
+        display: none;
+    }
+
+    /* .project-date {
+        font-size: 1rem;
+        font-weight: 800;
+
+        margin: 1rem 0;
+    } */
+
+    /* .project-desc, .presentation-desc {
+        font-size: 1rem;
+        line-height: 1.6rem;
+        font-weight: normal;
+
+        margin: 1rem 0;
+    } */
+
+    /* .presentation-desc span {
+        font-style: italic;
+    } */
+
+}

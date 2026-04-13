@@ -1,0 +1,109 @@
+:root {
+    --dark-color: #323232;
+    --accent-color: #B97DFF;
+    --lighter-color: #5A5A5A;
+
+    /* Gradients */
+    --color-one: #7D87FF;
+    --color-two: var(--accent-color);
+    --color-three: #FFAF7D;
+}
+
+@media screen and (min-width: 375px) {
+    .portrait {
+        margin: 0 auto;
+    }
+    
+    .portrait img {
+        max-width: 100%;
+        display: block;
+    }
+
+    .info {
+        margin: 3rem 0;
+    }
+    
+    .title {
+        font-size: 2rem;
+        font-weight: 800;
+
+        margin: 0;
+    }
+
+    .desc {
+        font-size: 1rem;
+        line-height: 1.6rem;
+
+        margin: 1rem 0 0 0;
+    }
+
+    .music-section {
+        margin: 1.5rem 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+
+        margin: 0;
+    }
+
+    .section-main {
+        text-align: center;
+
+        margin: 2rem 0;
+    }
+
+    .section-main hr {
+        border: none;
+        height: 2px;
+        background-color: var(--dark-color);
+
+        margin: 2.5rem 6rem;
+    }
+
+    .album {
+        margin: 2rem 0;
+    }
+
+    .album-cover {
+        display: block;
+        max-width: 100%;
+
+        margin: 0 auto;
+    }
+    
+    .album-text {
+        margin: 1rem 0;
+    }
+
+    .album-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        font-style: italic;
+
+        margin: 0;
+        line-height: 2rem;
+    }
+
+    .album-desc {
+        font-size: 1rem;
+        font-weight: 600;
+
+        margin: 0;
+    }
+
+    .album-desc span {
+        font-weight: 400;
+    }
+
+    .motorcycle {
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+    .motorcycle img {
+        max-width: 100%;
+        display: block;
+    }
+}
