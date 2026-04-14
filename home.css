@@ -145,5 +145,57 @@ section {
 
 
 
+/* Overall Sections */
+
+section h3 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
 /* CS Section */
 
+
+
+/* Music */
+
+
+
+
+
+/* Motorcycles */
+
+.motorcycles-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.motorcycles h3 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.motorcycles p {
+    /* text-indent: 4ch; */
+    max-width: 66ch;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.bikes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.motorcycles img {
+    max-width: 100%;
+    height: auto;
+    width: 32rem;
+    border: 2px solid var(--dark-color);
+}
