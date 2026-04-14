@@ -1,12 +1,18 @@
 :root {
     --dark-color: #323232;
     --accent-color: #B97DFF;
+    --light-color: #414141;
     --lighter-color: #5A5A5A;
 
     /* Gradients */
     --color-one: #7D87FF;
     --color-two: var(--accent-color);
     --color-three: #FFAF7D;
+
+    /* Lone Star */
+    --lsc-blue: #1A3859;
+    --lsc-blue-lighter: #2b5d92;
+    --lsc-red: #BA364A;
 }
 
 /* Do one for a PC and one for a laptop. */
@@ -19,6 +25,10 @@
     box-sizing: border-box;
 }
 
+
+
+/* HEADER */
+
 header {
     width: 100%;
     position: fixed;
@@ -29,7 +39,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    background-color: #B97DFF;
 }
 
 .logo a, .nav a {
@@ -46,5 +55,85 @@ header {
 #nav-items li {
     list-style-type: none;
     font-weight: 600;
+    font-size: 1.2rem;
     margin-left: 4rem;
+}
+
+
+
+/* HERO SECTION */
+
+.hero-section {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16rem;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center; /* flex-start for top alignment .. center for centered alignment*/
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
+.hero-text {
+    padding-right: 4rem;
+    height: 100%;
+}
+
+.intro {
+    font-size: 5.4rem;
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+}
+
+.intro span {
+    background: linear-gradient(to right, #2563EB, #EB4925);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+}
+
+.spiel {
+    font-weight: 500;
+    color: var(--light-color);
+    line-height: 1.5;
+    margin-bottom: 6.4rem;
+    max-width: 66ch;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+
+    border: none;
+    background-color: var(--dark-color);
+}
+
+.cta-button a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.hero-image {
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    width: 32rem;
+    border: 2px solid var(--dark-color);
+    display: block;
 }
