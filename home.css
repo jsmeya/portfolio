@@ -10,3 +10,41 @@
 }
 
 /* Do one for a PC and one for a laptop. */
+
+/* (The below is for PC dimensions) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #B97DFF;
+}
+
+.logo a, .nav a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+#nav-items {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+#nav-items li {
+    list-style-type: none;
+    font-weight: 600;
+    margin-left: 4rem;
+}

@@ -19,6 +19,8 @@
 body {
     font-family: var(--font-stack);
     color: var(--dark-color);
+    margin: 0;
+    padding: 0;
 }
 
 button {
