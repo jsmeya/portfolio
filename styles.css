@@ -25,32 +25,3 @@ button {
     font-family: var(--font-stack);
     color: var(--dark-color);
 }
-
-@media screen and (min-width: 375px) {
-    main {
-        padding: 0 32px;
-    }
-    header {
-        padding: 24px 24px;
-        margin-bottom: 1.5rem;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .logo {
-        margin: 0;
-        font-size: 2rem;
-        font-weight: 700;
-    }
-    .logo a {
-        text-decoration: none;
-        color: var(--dark-color);
-    }
-    .menu-button {
-        background: none;
-        border: none;
-        font-size: 2rem;
-        font-weight: 700;
-    }
-}
