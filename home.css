@@ -19,7 +19,11 @@
 
 /* (The below is for PC dimensions) */
 
+
+
+/* ------- */
 /* CONTENT */
+/* ------- */
 
 section {
     min-height: calc(100vh - 10rem);
@@ -32,7 +36,9 @@ section {
 
 
 
+/* ------------ */
 /* HERO SECTION */
+/* ------------ */
 
 .hero-content {
     display: flex;
@@ -104,7 +110,9 @@ section {
 
 
 
+/* ---------------- */
 /* Section Elements */
+/* ---------------- */
 
 section h3 {
     font-size: 3rem;
@@ -124,11 +132,23 @@ section p {
     font-weight: 500;
 }
 
+
+
+/* ---------- */
 /* CS Section */
+/* ---------- */
 
 
 
+
+
+/* ----- */
 /* Music */
+/* ----- */
+
+.music {
+    margin-bottom: 8rem;
+}
 
 .music-content {
     display: flex;
@@ -140,7 +160,7 @@ section p {
 }
 
 .instrument {
-    align-self: flex-start;
+    align-self: center; /* flex-start for left alignment*/
 }
 
 .instrument p {
