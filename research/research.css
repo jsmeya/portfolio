@@ -26,10 +26,11 @@ section {
 
     text-align: center;
     padding: 4rem;
+    margin-bottom: 2rem;
 }
 
 .project {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 }
 
 .project-heading {
@@ -56,6 +57,49 @@ section {
     font-weight: 600;
 
     white-space: nowrap;
+}
+
+.project-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    margin: 2rem 0 0 2rem;
+    border-left: 2px solid rgba(50, 50, 50, 0.1);
+    padding-left: 2rem;
+
+    max-width: 65%;
+}
+
+.info {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.achievements {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+}
+
+.achievements span {
+    font-weight: 600;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 700;
+
+    border: 2px solid var(--dark-color);
+
+    padding: 0.8rem 2.6rem;
 }
 
 /* .t1 {
