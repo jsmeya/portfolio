@@ -19,18 +19,10 @@
 
 /* (The below is for PC dimensions) */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
 /* CONTENT */
 
 section {
-    min-height: 100vh;
+    min-height: calc(100vh - 10rem);
 
     display: flex;
     align-items: center;

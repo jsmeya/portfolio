@@ -16,6 +16,12 @@
     --color-three: #FFAF7D;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--font-stack);
     color: var(--dark-color);
@@ -33,7 +39,8 @@ button {
 
 header {
     width: 100%;
-    position: fixed;
+    position: sticky;
+    z-index: 999;
     top: 0;
     left: 0;
 
