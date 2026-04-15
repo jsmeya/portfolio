@@ -27,40 +27,6 @@
 
 
 
-/* HEADER */
-
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-}
-
-.logo a, .nav a {
-    text-decoration: none;
-    color: var(--dark-color);
-}
-
-#nav-items {
-    display: flex;
-    align-items: center;
-    padding-right: 1rem;
-}
-
-#nav-items li {
-    list-style-type: none;
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-left: 4rem;
-}
-
-
-
 /* CONTENT */
 
 section {
@@ -112,9 +78,10 @@ section {
     font-weight: 500;
     color: var(--light-color);
     line-height: 1.5;
-    margin-bottom: 6.4rem;
     max-width: 66ch;
     font-size: 1.2rem;
+    
+    margin-bottom: 2.4rem; /* previously 6.4rem */
 }
 
 .cta-button {
@@ -145,11 +112,24 @@ section {
 
 
 
-/* Overall Sections */
+/* Section Elements */
 
 section h3 {
     font-size: 3rem;
     font-weight: 700;
+}
+
+section h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+section p {
+    /* text-indent: 4ch; */
+    max-width: 66ch;
+
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 /* CS Section */
@@ -158,9 +138,18 @@ section h3 {
 
 /* Music */
 
+.music-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    gap: 2rem;
+    width: 100%;
+}
 
-
+.instrument {
+    align-self: flex-start;
+}
 
 /* Motorcycles */
 
@@ -170,19 +159,6 @@ section h3 {
     align-items: center;
 
     gap: 2rem;
-}
-
-.motorcycles h3 {
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.motorcycles p {
-    /* text-indent: 4ch; */
-    max-width: 66ch;
-
-    font-size: 1.2rem;
-    font-weight: 500;
 }
 
 .bikes {
