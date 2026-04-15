@@ -40,6 +40,10 @@ section {
 /* HERO SECTION */
 /* ------------ */
 
+.hero-section {
+    margin-bottom: 8rem;
+}
+
 .hero-content {
     display: flex;
     align-items: center; /* flex-start for top alignment .. center for centered alignment*/
@@ -130,9 +134,29 @@ section p {
 
     font-size: 1.2rem;
     font-weight: 500;
+    line-height: 1.6;
 }
 
 
+
+/* ------------------ */
+/* Personal Statement */
+/* ------------------ */
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4rem;
+    width: 100%;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    letter-spacing: 0.2px;
+    font-weight: 450;
+}
 
 /* ---------- */
 /* CS Section */
