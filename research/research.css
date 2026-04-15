@@ -41,10 +41,10 @@ section {
 }
 
 .project-title {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
 
-    max-width: 54ch;
+    max-width: 66ch;
 }
 
 .project-title span {
@@ -52,7 +52,7 @@ section {
 }
 
 .project-date {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
 
     white-space: nowrap;
