@@ -37,6 +37,18 @@ section {
     scroll-margin-top: 10rem;
 }
 
+/* fading */
+.fade-in {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 
 /* ------------ */
@@ -45,6 +57,7 @@ section {
 
 .hero-section {
     margin-top: 0;
+    position: relative;
 }
 
 .hero-content {
@@ -113,6 +126,31 @@ section {
     width: 32rem;
     border: 2px solid var(--dark-color);
     display: block;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark-color);
+
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(1rem);
+    }
 }
 
 
