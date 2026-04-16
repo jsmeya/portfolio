@@ -8,7 +8,7 @@ section {
     font-weight: 800;
 
     text-align: center;
-    padding: 4rem;
+    padding: 4rem 0;
     margin: 2rem 0 4rem 0;
 }
 
@@ -51,7 +51,7 @@ section {
     border-left: 2px solid rgba(50, 50, 50, 0.1);
     padding-left: 2rem;
 
-    max-width: 65%;
+    max-width: 66ch;
 }
 
 .info {
@@ -86,30 +86,7 @@ section {
     padding: 0.8rem 2.6rem;
 }
 
-/* .t1 {
-    color: #26a89d;
+.links a:hover {
+    background-color: var(--dark-color);
+    color: var(--bg-color);
 }
-
-.t2 {
-    color: #0448a0;
-}
-
-.t3 {
-    color: #29612f;
-}
-
-.t4 {
-    color: #E0771C;
-}
-
-.t5 {
-    color: #B23C3C;
-}
-
-.t6 {
-    color: #AE77D6;
-}
-
-.t7 {
-    color: #6A9955;
-} */
