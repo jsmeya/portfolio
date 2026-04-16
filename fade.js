@@ -1,6 +1,7 @@
-const elements = document.querySelectorAll('.fade-in'); // Defining all of the elements with this in their class name
+// Fade-in on scroll
+const elements = document.querySelectorAll('.fade-in');
 
-const observer = new IntersectionObserver((entries) => { // Intersection observer basically detects when a given element enters the viewport.
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
@@ -9,4 +10,11 @@ const observer = new IntersectionObserver((entries) => { // Intersection observe
     });
 }, { threshold: 0.2 });
 
-elements.forEach(el => observer.observe(el))
+elements.forEach(el => observer.observe(el));
+
+// Header shadow on scroll
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 0);
+}, { passive: true });

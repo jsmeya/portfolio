@@ -49,7 +49,11 @@ header {
     padding: 1rem 16rem;
 
     background-color: var(--bg-color);
-    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
 }
 
 .logo {
@@ -118,25 +122,56 @@ footer {
     padding: 2rem;
 }
 
-.footer-text {
-    font-size: 1rem;
-    font-weight: 400;
+.footer-links {
+    display: flex;
+    gap: 2.4rem;
+    justify-content: center;
+    padding: 4rem 0 1rem 0;
 }
 
-.footer-text p {
-    padding: 1rem;
+.footer-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--dark-color);
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
 }
 
 .credits {
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 
-.text-divider {
-    height: 1px;
+.divider {
+    height: 2px;
     width: 2rem;
-    color: var(--dark-color);
-    background: var(--dark-color);
-    font-size: 0;
+    background: var(--lighter-color);
     border: 0;
+    margin: 1.2rem auto;
+}
+
+.copyright {
     margin: 0 auto;
+    width: fit-content;
+
+    background: linear-gradient(to right, var(--color-one), var(--color-two));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
