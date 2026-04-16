@@ -193,14 +193,29 @@ section p {
     padding-left: 2rem;
 }
 
+
+
+/* ----------- */
 /* Motorcycles */
+/* ----------- */
 
 .motorcycles-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    gap: 2rem;
+    gap: 4rem;
+    width: 100%;
+}
+
+.description {
+    align-self: center;  /* flex-start for left alignment*/
+}
+
+.description p {
+    margin: 1rem 0 0 1rem;
+    border-left: 2px solid rgba(50, 50, 50, 0.1);
+    padding-left: 2rem;
 }
 
 .bikes {
