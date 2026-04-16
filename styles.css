@@ -7,13 +7,14 @@
     /* Colors */
     --dark-color: #323232;
     --accent-color: #B97DFF;
-    --lighter-color: #5A5A5A;
-    --light-color: #E1E1E1;
+    --light-color: #5A5A5A;
+    --lighter-color: #E1E1E1;
+
+    --bg-color: #FFFFFF;
 
     /* Gradients */
-    --color-one: #7D87FF;
-    --color-two: var(--accent-color);
-    --color-three: #FFAF7D;
+    --color-one: #2563EB;
+    --color-two: #EB4925;
 }
 
 html {
@@ -53,10 +54,15 @@ header {
     justify-content: space-between;
     padding: 1rem 16rem;
 
-    background-color: #FFFFFF;
+    background-color: var(--bg-color);
 }
 
-.logo a, .nav a {
+.logo {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo, .nav a {
     text-decoration: none;
     color: var(--dark-color);
 }

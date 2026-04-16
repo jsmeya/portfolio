@@ -1,20 +1,3 @@
-:root {
-    --dark-color: #323232;
-    --accent-color: #B97DFF;
-    --light-color: #414141;
-    --lighter-color: #5A5A5A;
-
-    /* Gradients */
-    --color-one: #7D87FF;
-    --color-two: var(--accent-color);
-    --color-three: #FFAF7D;
-
-    /* Lone Star */
-    --lsc-blue: #1A3859;
-    --lsc-blue-lighter: #2b5d92;
-    --lsc-red: #BA364A;
-}
-
 section {
     min-height: 100vh;
     padding: 0 16rem;
