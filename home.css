@@ -32,6 +32,9 @@ section {
     align-items: center;
     justify-content: center;
     padding: 0 16rem;
+
+    margin-top: 16rem;
+    scroll-margin-top: 10rem;
 }
 
 
@@ -41,7 +44,7 @@ section {
 /* ------------ */
 
 .hero-section {
-    margin-bottom: 8rem;
+    margin-top: 0;
 }
 
 .hero-content {
@@ -137,11 +140,25 @@ section p {
     line-height: 1.6;
 }
 
+.description {
+    align-self: center;  /* flex-start for left alignment*/
+}
+
+.description p {
+    margin: 1rem 0 0 1rem;
+    border-left: 2px solid rgba(50, 50, 50, 0.1);
+    padding-left: 2rem;
+}
+
 
 
 /* ------------------ */
 /* Personal Statement */
 /* ------------------ */
+
+.about {
+    margin-top: 8rem;
+}
 
 .about-content {
     display: flex;
@@ -158,23 +175,13 @@ section p {
     font-weight: 450;
 }
 
+
+
 /* ---------- */
 /* CS Section */
 /* ---------- */
 
-
-
-
-
-/* ----- */
-/* Music */
-/* ----- */
-
-.music {
-    margin-bottom: 8rem;
-}
-
-.music-content {
+.cs-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,14 +190,19 @@ section p {
     width: 100%;
 }
 
-.instrument {
-    align-self: center; /* flex-start for left alignment*/
-}
 
-.instrument p {
-    margin: 1rem 0 0 1rem;
-    border-left: 2px solid rgba(50, 50, 50, 0.1);
-    padding-left: 2rem;
+
+/* ----- */
+/* Music */
+/* ----- */
+
+.music-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4rem;
+    width: 100%;
 }
 
 
@@ -206,16 +218,6 @@ section p {
 
     gap: 4rem;
     width: 100%;
-}
-
-.description {
-    align-self: center;  /* flex-start for left alignment*/
-}
-
-.description p {
-    margin: 1rem 0 0 1rem;
-    border-left: 2px solid rgba(50, 50, 50, 0.1);
-    padding-left: 2rem;
 }
 
 .bikes {
