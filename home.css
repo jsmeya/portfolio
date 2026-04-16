@@ -14,18 +14,6 @@ section {
     scroll-margin-top: 10rem;
 }
 
-/* fading */
-.fade-in {
-    opacity: 0;
-    transform: translateY(1rem);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 
 
 /* ------------ */
@@ -208,13 +196,6 @@ section p {
     margin-top: 8rem;
 }
 
-.about-content p {
-    font-size: 1.1rem;
-    letter-spacing: 0.2px;
-    font-weight: 400;
-}
-
-
 
 /* ----------- */
 /* Motorcycles */
@@ -238,4 +219,149 @@ section p {
 
 .motorcycles img:hover {
     transform: scale(1.03);
+}
+
+
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+
+@media (max-width: 1697px) {
+    
+    /* ------- */
+    /* CONTENT */
+    /* ------- */
+
+    section {
+        min-height: calc(100vh - 10rem);
+        padding: 0 clamp(1.5rem, 13vw, 16rem);
+
+        margin-top: 12rem;
+        scroll-margin-top: 10rem;
+    }
+
+    /* ------------ */
+    /* HERO SECTION */
+    /* ------------ */
+
+    .hero-content {
+        gap: 1rem;
+    }
+
+    .hero-text {
+        padding-right: 2rem;
+    }
+
+    .intro {
+        font-size: 5rem;
+        margin-bottom: 0;
+    }
+
+    .tagline {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .spiel {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        font-size: 1.5rem;
+    }
+
+    .hero-image img {
+        width: 28rem;
+    }
+
+    /* ----------- */
+    /* Motorcycles */
+    /* ----------- */
+
+    .motorcycles img {
+        width: 28rem;
+    }
+
+}
+
+@media (max-width: 1520px) {
+    /* ------- */
+    /* CONTENT */
+    /* ------- */
+
+    section {
+        min-height: calc(100vh - 10rem);
+        padding: 0 clamp(1.5rem, 13vw, 16rem);
+
+        margin-top: 12rem;
+        scroll-margin-top: 10rem;
+    }
+
+    /* ------------ */
+    /* HERO SECTION */
+    /* ------------ */
+
+    .hero-content {
+        gap: 1rem;
+    }
+
+    .hero-text {
+        padding-right: 2rem;
+    }
+
+    .intro {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .spiel {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+    }
+
+    .hero-image img {
+        width: 22rem;
+    }
+
+    /* ---------------- */
+    /* Section Elements */
+    /* ---------------- */
+
+    .section-content {
+        gap: 2rem;
+    }
+
+    section h3 {
+        font-size: 3rem;
+    }
+
+    section h4 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 1.2rem;
+    }
+
+    .description p {
+        margin: 1rem 0 0 1rem;
+        padding-left: 2rem;
+    }
+
+    /* ----------- */
+    /* Motorcycles */
+    /* ----------- */
+
+    .motorcycles img {
+        width: 24rem;
+    }
 }
