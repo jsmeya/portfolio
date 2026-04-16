@@ -7,9 +7,15 @@ section {
     font-size: 4rem;
     font-weight: 800;
 
-    text-align: center;
     padding: 4rem 0;
-    margin: 2rem 0 4rem 0;
+    margin: 2rem auto 4rem auto;
+
+    width: fit-content;
+
+    background: linear-gradient(to right, var(--color-one), var(--color-two));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .project {
@@ -48,23 +54,25 @@ section {
     gap: 2rem;
 
     margin: 2rem 0 0 2rem;
-    border-left: 2px solid rgba(50, 50, 50, 0.1);
+    border-left: 2px solid var(--lighter-color);
     padding-left: 2rem;
 
     max-width: 66ch;
+    transition: border-color 0.2s ease;
+}
+
+.project-contents:hover {
+    border-left-color: var(--accent-color);
 }
 
 .info {
     font-weight: 600;
-    /* font-size: 1.2rem; */
 }
 
 .achievements {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-
-    /* font-size: 1.2rem; */
 }
 
 .achievements span {
@@ -84,6 +92,7 @@ section {
     border: 2px solid var(--dark-color);
 
     padding: 0.8rem 2.6rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .links a:hover {

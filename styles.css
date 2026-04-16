@@ -6,14 +6,13 @@
     
     /* Colors */
     --dark-color: #323232;
-    --accent-color: #B97DFF;
     --light-color: #5A5A5A;
-    --lighter-color: #E1E1E1;
-
+    --lighter-color: rgba(50, 50, 50, 0.1);
     --bg-color: #FFFFFF;
 
     /* Gradients */
-    --color-one: #2563EB;
+    --color-one: #2563eb;
+    --accent-color: #2563eb;
     --color-two: #EB4925;
 }
 
@@ -34,11 +33,6 @@ body {
     padding: 0;
 }
 
-button {
-    font-family: var(--font-stack);
-    color: var(--dark-color);
-}
-
 
 /* HEADER */
 
@@ -55,6 +49,7 @@ header {
     padding: 1rem 16rem;
 
     background-color: var(--bg-color);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
 }
 
 .logo {
@@ -65,6 +60,12 @@ header {
 .logo, .nav a {
     text-decoration: none;
     color: var(--dark-color);
+    transition: color 0.2s ease;
+}
+
+.logo:hover,
+.logo a:hover {
+    color: var(--accent-color);
 }
 
 #nav-items {
@@ -77,6 +78,29 @@ header {
     font-weight: 600;
     font-size: 1.2rem;
     margin-left: 4rem;
+}
+
+#nav-items a {
+    position: relative;
+}
+
+#nav-items a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--dark-color);
+    transition: width 0.3s ease;
+}
+
+#nav-items a:hover::after {
+    width: 100%;
+}
+
+#nav-items a.active::after {
+    width: 100%;
 }
 
 

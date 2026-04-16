@@ -93,6 +93,11 @@ section {
 
     padding: 1rem 2rem;
     background-color: var(--dark-color);
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #1a1a1a;
 }
 
 .hero-image {
@@ -105,6 +110,11 @@ section {
     width: 32rem;
     border: 2px solid var(--dark-color);
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
 }
 
 .scroll-indicator {
@@ -152,6 +162,13 @@ section h3 {
     font-weight: 700;
 }
 
+.section-title {
+    background: linear-gradient(to right, var(--color-one), var(--color-two));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 section h4 {
     font-size: 1.8rem;
     font-weight: 600;
@@ -172,8 +189,13 @@ section p {
 
 .description p {
     margin: 1rem 0 0 1rem;
-    border-left: 2px solid rgba(50, 50, 50, 0.1);
+    border-left: 2px solid var(--lighter-color);
     padding-left: 2rem;
+    transition: border-color 0.2s ease;
+}
+
+.description p:hover {
+    border-left-color: var(--accent-color);
 }
 
 
@@ -211,4 +233,9 @@ section p {
     height: auto;
     width: 32rem;
     border: 2px solid var(--dark-color);
+    transition: transform 0.3s ease;
+}
+
+.motorcycles img:hover {
+    transform: scale(1.03);
 }
