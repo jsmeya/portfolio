@@ -34,6 +34,44 @@ body {
 }
 
 
+/* MOBILE NOTICE */
+
+#mobile-notice {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    #mobile-notice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        min-height: 100svh;
+        padding: 2rem;
+        text-align: center;
+        background-color: var(--bg-color);
+    }
+
+    #mobile-notice h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark-color);
+    }
+
+    #mobile-notice p {
+        font-size: 1rem;
+        color: var(--light-color);
+        max-width: 36ch;
+        line-height: 1.6;
+    }
+
+    body > *:not(#mobile-notice) {
+        display: none !important;
+    }
+}
+
+
 /* HEADER */
 
 header {
