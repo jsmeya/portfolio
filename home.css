@@ -365,3 +365,84 @@ section p {
         width: 24rem;
     }
 }
+
+@media (max-width: 1200px) {
+    /* ------- */
+    /* CONTENT */
+    /* ------- */
+
+    section {
+        min-height: calc(100vh - 10rem);
+        padding: 0 clamp(1.5rem, 13vw, 16rem);
+
+        margin-top: 12rem;
+        scroll-margin-top: 10rem;
+    }
+
+
+
+    /* ------------ */
+    /* HERO SECTION */
+    /* ------------ */
+
+    .hero-content {
+        gap: 1rem;
+    }
+
+    .hero-text {
+        padding-right: 2rem;
+    }
+
+    .intro {
+        font-size: 3.2rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .spiel {
+        font-size: 0.8rem;
+        margin-bottom: 2.6rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .hero-image img {
+        width: 20rem;
+    }
+
+
+
+    /* ---------------- */
+    /* Section Elements */
+    /* ---------------- */
+
+    .section-content {
+        gap: 3rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+
+
+    /* ----------- */
+    /* Motorcycles */
+    /* ----------- */
+
+    .bikes {
+        gap: 1.6rem;
+    }
+
+    .motorcycles img {
+        width: 20rem;
+    }
+
+}
