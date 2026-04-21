@@ -157,3 +157,36 @@ section {
         font-size: 1.2rem;
     }
 }
+
+@media (max-width: 1200px) {
+    section {
+        padding: 0 clamp(1.5rem, 13vw, 16rem);
+    }
+
+    .research h1 {
+        font-size: 3.2rem;
+        margin: 4rem auto 5rem auto;
+    }
+
+    .project {
+        margin-top: 6rem;
+        margin-bottom: 0;
+    }
+
+    .project-title {
+        font-size: 1rem;
+    }
+
+    .project-date {
+        font-size: 1rem;
+    }
+
+    .info {
+        font-size: 0.9rem;
+    }
+
+    .achievements p {
+        font-size: 0.9rem;
+    }
+
+}
