@@ -16,7 +16,7 @@ section {
     font-size: 4rem;
     font-weight: 800;
 
-    margin: 6rem auto 8rem auto;
+    margin: 6rem auto 2rem auto;
 
     width: fit-content;
 
@@ -24,6 +24,15 @@ section {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.page-intro {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--light-color);
+    text-align: center;
+    max-width: 60ch;
+    margin: 0 auto 6rem auto;
 }
 
 .role {
@@ -107,7 +116,7 @@ section {
 
     .leadership h1 {
         font-size: 4rem;
-        margin: 6rem auto 7rem auto;
+        margin: 6rem auto 2rem auto;
     }
 
     .role {
@@ -137,7 +146,7 @@ section {
 
     .leadership h1 {
         font-size: 4rem;
-        margin: 4rem auto 5rem auto;
+        margin: 6rem auto 2rem auto;
     }
 
     .role {
@@ -166,7 +175,7 @@ section {
 
     .leadership h1 {
         font-size: 3.2rem;
-        margin: 4rem auto 5rem auto;
+        margin: 6rem auto 2rem auto;
     }
 
     .role {

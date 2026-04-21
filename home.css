@@ -73,21 +73,6 @@ section {
     margin-bottom: 3.2rem;
 }
 
-/* .cta-button {
-    text-decoration: none;
-    color: var(--bg-color);
-    font-size: 1.6rem;
-    font-weight: 500;
-
-    padding: 1rem 2rem;
-    background-color: var(--dark-color);
-    transition: background-color 0.2s ease;
-}
-
-.cta-button:hover {
-    background-color: #1a1a1a;
-} */
-
 .cta-button {
     text-decoration: none;
     color: var(--dark-color);
