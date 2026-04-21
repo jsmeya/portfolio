@@ -79,11 +79,12 @@ section {
 }
 
 .photo-grid {
+    max-width: inherit;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
     margin: 2rem 0 0 2rem;
-    max-width: fit-content;
+    width: 64rem;
 }
 
 .photo-grid img:nth-child(1) { object-position: 50% 25%; }
@@ -122,6 +123,10 @@ section {
         font-size: 1.2rem;
     }
 
+    .photo-grid {
+        width: 56rem;
+    }
+
 }
 
 @media (max-width: 1520px) {
@@ -146,6 +151,10 @@ section {
 
     .role-date {
         font-size: 1.2rem;
+    }
+
+    .photo-grid {
+        width: 48rem;
     }
 
 }
