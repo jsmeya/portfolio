@@ -1,0 +1,151 @@
+section {
+    min-height: 100vh;
+    padding: 0 16rem;
+}
+
+.leadership {
+    animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(1rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.leadership h1 {
+    font-size: 4rem;
+    font-weight: 800;
+
+    margin: 6rem auto 8rem auto;
+
+    width: fit-content;
+
+    background: linear-gradient(to right, var(--color-one), var(--color-two));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.role {
+    margin-bottom: 6rem;
+}
+
+.role-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+    gap: 2rem;
+}
+
+.role-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    max-width: 66ch;
+}
+
+.role-title span {
+    font-weight: 800;
+    font-style: normal;
+}
+
+.role-date {
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.role-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    margin: 2rem 0 0 2rem;
+    border-left: 2px solid var(--lighter-color);
+    padding-left: 2rem;
+
+    max-width: 66ch;
+    transition: border-color 0.2s ease;
+}
+
+.role-contents:hover {
+    border-left-color: var(--accent-color);
+}
+
+.info {
+    font-weight: 600;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 2rem 0 0 2rem;
+    max-width: 860px;
+}
+
+.photo-grid img:nth-child(1) { object-position: 50% 25%; }
+.photo-grid img:nth-child(2) { object-position: 50% 50%; }
+.photo-grid img:nth-child(3) { object-position: 50% 100%; }
+
+.photo-grid img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border: 2px solid var(--dark-color);
+}
+
+@media (max-width: 1697px) {
+
+    section {
+        padding: 0 clamp(1.5rem, 13vw, 16rem);
+    }
+
+    .leadership h1 {
+        font-size: 4rem;
+        margin: 6rem auto 7rem auto;
+    }
+
+    .role {
+        margin-top: 6rem;
+        margin-bottom: 0;
+    }
+
+    .role-title {
+        font-size: 1.2rem;
+    }
+
+    .role-date {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (max-width: 1520px) {
+
+    section {
+        padding: 0 clamp(1.5rem, 13vw, 16rem);
+    }
+
+    .leadership h1 {
+        font-size: 4rem;
+        margin: 4rem auto 5rem auto;
+    }
+
+    .role {
+        margin-top: 6rem;
+        margin-bottom: 0;
+    }
+
+    .role-title {
+        font-size: 1.2rem;
+    }
+
+    .role-date {
+        font-size: 1.2rem;
+    }
+
+}
