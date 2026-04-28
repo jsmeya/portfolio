@@ -188,6 +188,18 @@ section p {
     border-left-color: var(--accent-color);
 }
 
+.section-content img {
+    max-width: 100%;
+    height: auto;
+    width: 64rem;
+    border: 2px solid var(--dark-color);
+    transition: transform 0.3s ease;
+}
+
+.section-content img:hover {
+    transform: scale(1.03);
+}
+
 
 
 /* ------------------ */
@@ -277,6 +289,11 @@ section p {
         width: 28rem;
     }
 
+    .section-content img {
+        width: 56rem;
+    }
+
+
     /* ----------- */
     /* Motorcycles */
     /* ----------- */
@@ -359,6 +376,10 @@ section p {
         padding-left: 2rem;
     }
 
+    .section-content img {
+        width: 50rem;
+    }
+
     /* ----------- */
     /* Motorcycles */
     /* ----------- */
@@ -433,6 +454,9 @@ section p {
         font-size: 1rem;
     }
 
+    .section-content img {
+        width: 50rem;
+    }
 
 
     /* ----------- */
