@@ -210,6 +210,12 @@ button:focus-visible {
     line-height: 1.6;
 }
 
+.section-title {
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 0.02em;
+}
+
 .about {
     padding-block: var(--space-section);
 }
