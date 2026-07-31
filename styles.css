@@ -1,0 +1,237 @@
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter/Inter-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter/Inter-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-base: #18191a;
+    --color-light: #e8eaec;
+    --color-mid: rgb(132, 134, 136);
+    --color-accent: #5a9b7c;
+
+    --page-space: 1.25rem; /* For mobile */
+    --space-section: 8rem;
+
+    --font-serif: Georgia, serif;
+    --font-sans: "Inter", sans-serif;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    :root {
+        --page-space: 2rem;
+        --space-section: 10rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    :root {
+        --page-space: 3rem;
+        --space-section: 12rem;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-light);
+    background-color: var(--color-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.container {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: var(--page-space);
+}
+
+.skip-link {
+    position: absolute;
+    top: -3rem;
+    left: 1rem;
+    z-index: 100;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-accent);
+    color: var(--color-base);
+    text-decoration: none;
+}
+
+.skip-link:focus-visible {
+    top: 1rem;
+}
+
+.site-header {
+    padding-block: 1rem;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-light);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+.logo:hover {
+    color: var(--color-accent);
+}
+
+.site-nav ul {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+    letter-spacing: 0.02em;
+}
+
+.site-nav a:hover,
+.site-nav a.is-active {
+    border-bottom-color: var(--color-accent);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.btn-outline {
+    border: 1px solid var(--color-mid);
+    color: var(--color-light);
+}
+
+.btn-outline:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.btn-contact {
+    color: var(--color-light);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    font-size: 0.9rem;
+}
+
+.btn-contact:hover {
+    color: var(--color-accent);
+}
+
+.hero {
+    display: flex;
+    align-items: flex-start;
+    min-height: 80svh;
+    padding-block: var(--space-section);
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: calc(var(--space-section) / 2);
+}
+
+.name {
+    margin: 0;
+    font-size: clamp(2.75rem, 8vw, 4.4rem);
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+}
+
+.intro {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-mid);
+}
+
+.lead {
+    margin: 0;
+    max-width: 42rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.about {
+    padding-block: var(--space-section);
+}
+
+.about h2 {
+    margin: 0 0 1.5rem;
+}
+
+.about-bio {
+    margin: 0;
+    max-width: 42rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.about-stack {
+    margin: 1.5rem 0 0;
+    font-size: 0.9rem;
+    color: var(--color-mid);
+}
+
+.stack-label {
+    font-weight: 500;
+    color: var(--color-light);
+}
