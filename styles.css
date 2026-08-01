@@ -405,14 +405,47 @@ button:focus-visible {
     margin-bottom: 0.75rem;
 }
 
+.experience-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
 .experience-role {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--color-light);
 }
 
-.experience-meta {
+.experience-company {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    width: fit-content;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-mid);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.experience-company:hover {
+    color: var(--color-light);
+}
+
+.experience-company-icon {
+    width: 0.7em;
+    height: 0.7em;
+    transition: transform 0.2s ease;
+}
+
+.experience-company:hover .experience-company-icon {
+    transform: translate(2px, -2px);
+}
+
+.experience-dates {
     font-size: 0.85rem;
     color: var(--color-mid);
     white-space: nowrap;
