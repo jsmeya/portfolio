@@ -243,7 +243,6 @@ button:focus-visible {
 .hero {
     display: flex;
     align-items: flex-start;
-    min-height: 80svh;
     padding-top: var(--space-section);
 }
 
@@ -251,7 +250,6 @@ button:focus-visible {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    margin-bottom: calc(var(--space-section) / 2);
 }
 
 .name {
@@ -305,7 +303,7 @@ button:focus-visible {
 }
 
 .toolbox {
-    padding-bottom: var(--space-section);
+    padding-top: var(--space-section);
 }
 
 .toolbox h2 {
@@ -359,8 +357,16 @@ button:focus-visible {
     transform: translateY(-2px);
 }
 
+.projects {
+    padding-top: var(--space-section);
+}
+
+.experience {
+    padding-top: var(--space-section);
+}
+
 .interests {
-    padding-bottom: var(--space-section);
+    padding-block: var(--space-section);
 }
 
 .interests h2 {
