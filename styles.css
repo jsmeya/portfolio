@@ -372,15 +372,31 @@ button:focus-visible {
     gap: 1rem;
 }
 
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.footer-tagline {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-mid);
+}
+
 .footer-copy {
     margin: 0;
     font-size: 0.85rem;
     color: var(--color-mid);
+    font-weight: 500;
 }
 
 .footer-links {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
+    font-weight: 500;
 }
 
 .footer-links a {
