@@ -70,8 +70,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-serif);
-    font-weight: 500;
+    /* font-family: var(--font-serif); */
+    font-weight: 700;
 }
 
 a:focus-visible,
@@ -107,8 +107,9 @@ button:focus-visible {
     top: 0;
     z-index: 100;
     padding-block: 1rem;
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    background-color: var(--color-base);
+    /* backdrop-filter: blur(24px); */
+    /* -webkit-backdrop-filter: blur(24px); */
     border-bottom: 1px solid var(--color-midder);
 }
 
@@ -303,13 +304,57 @@ button:focus-visible {
     border-left-color: var(--color-accent);
 }
 
-.about-stack {
-    margin: 1.5rem 0 0;
-    font-size: 0.9rem;
+.toolbox {
+    padding-bottom: var(--space-section);
+}
+
+.toolbox h2 {
+    margin: 0 0 0.75rem;
+}
+
+.section-description {
+    margin: 0 0 2.5rem;
+    max-width: 42rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
     color: var(--color-mid);
 }
 
-.stack-label {
-    font-weight: 500;
+.stack-group + .stack-group {
+    margin-top: 2rem;
+}
+
+.stack-category {
+    margin: 0 0 0.75rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--color-light);
+}
+
+.stack-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.stack-card {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--color-mid);
+    border-radius: 0.5rem;
+    background-color: var(--color-midder);
+    color: var(--color-mid);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.stack-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
 }
