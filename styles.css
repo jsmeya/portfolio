@@ -273,6 +273,11 @@ button:focus-visible {
     line-height: 1.6;
 }
 
+.lead span {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
 .section-title {
     font-weight: 700;
     font-size: 2em;
