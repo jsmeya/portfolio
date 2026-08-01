@@ -366,8 +366,16 @@ button:focus-visible {
     padding-top: var(--space-section);
 }
 
+.projects h2 {
+    margin: 0 0 0.75rem;
+}
+
 .experience {
     padding-top: var(--space-section);
+}
+
+.experience h2 {
+    margin: 0 0 0.75rem;
 }
 
 .experience-list {
