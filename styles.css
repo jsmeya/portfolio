@@ -53,6 +53,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: var(--font-sans);
@@ -274,6 +278,10 @@ button:focus-visible {
     font-weight: 700;
     font-size: 2em;
     letter-spacing: 0.02em;
+}
+
+.about {
+    padding-bottom: var(--space-section);
 }
 
 .about h2 {
