@@ -15,10 +15,14 @@
 }
 
 :root {
-    --color-base: #18191a;
+    --color-base: rgb(32, 33, 34);
     --color-light: #e8eaec;
     --color-mid: rgb(132, 134, 136);
-    --color-accent: #5a9b7c;
+    --color-accent: rgb(90, 155, 124);
+    
+    --color-darker: rgb(26, 27, 28);
+    --color-midder: rgb(50, 51, 52);
+    --color-accent-lighter: rgb(108, 175, 144);
 
     --page-space: 1.25rem; /* For mobile */
     --space-section: 8rem;
@@ -95,7 +99,13 @@ button:focus-visible {
 }
 
 .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     padding-block: 1rem;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--color-midder);
 }
 
 .header-inner {
@@ -111,32 +121,34 @@ button:focus-visible {
     color: var(--color-light);
     text-decoration: none;
     letter-spacing: 0.02em;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .logo:hover {
     color: var(--color-accent);
+    transform: translateY(-2px);
 }
 
 .site-nav ul {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .site-nav a {
-    color: var(--color-light);
+    color: var(--color-mid);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     padding-bottom: 0.25rem;
-    border-bottom: 2px solid transparent;
     letter-spacing: 0.02em;
+    transition: color 0.2s ease;
 }
 
 .site-nav a:hover,
 .site-nav a.is-active {
-    border-bottom-color: var(--color-accent);
+    color: var(--color-light);
 }
 
 .header-actions {
@@ -152,6 +164,7 @@ button:focus-visible {
     font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-outline {
@@ -160,26 +173,73 @@ button:focus-visible {
 }
 
 .btn-outline:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
+    background-color: var(--color-darker);
+    transform: translateY(-2px);
 }
 
 .btn-contact {
-    color: var(--color-light);
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
+    color: var(--color-base);
+    background-color: var(--color-light);
+    border: 1px solid var(--color-light);
     font-size: 0.9rem;
 }
 
 .btn-contact:hover {
-    color: var(--color-accent);
+    background-color: var(--color-mid);
+        border: 1px solid var(--color-mid);
+    transform: translateY(-2px);
+}
+
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.6rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-cta-primary {
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    color: var(--color-base);
+    font-weight: 600;
+}
+
+.btn-cta-primary:hover {
+    border-color: var(--color-accent);
+    background-color: var(--color-accent-lighter);
+    /* color: var(--color-light); */
+    transform: translateY(-2px);
+}
+
+.btn-cta-secondary {
+    background-color: var(--color-midder);
+    border: 1px solid var(--color-mid);
+    color: var(--color-light);
+}
+
+.btn-cta-secondary:hover {
+    background-color: var(--color-darker);
+    transform: translateY(-2px);
 }
 
 .hero {
     display: flex;
     align-items: flex-start;
     min-height: 80svh;
-    padding-block: var(--space-section);
+    padding-top: var(--space-section);
 }
 
 .hero-inner {
@@ -216,19 +276,23 @@ button:focus-visible {
     letter-spacing: 0.02em;
 }
 
-.about {
-    padding-block: var(--space-section);
-}
-
 .about h2 {
     margin: 0 0 1.5rem;
 }
 
 .about-bio {
     margin: 0;
-    max-width: 42rem;
+    max-width: 60ch;
+    padding-left: 1.25rem;
+    margin-left: 0.75rem;
+    border-left: 1px solid var(--color-midder);
     font-size: 1.1rem;
     line-height: 1.6;
+    transition: border-color 0.2s ease;
+}
+
+.about-bio:hover {
+    border-left-color: var(--color-accent);
 }
 
 .about-stack {
