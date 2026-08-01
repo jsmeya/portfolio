@@ -22,7 +22,7 @@
     
     --color-darker: rgb(26, 27, 28);
     --color-midder: rgb(50, 51, 52);
-    --color-accent-lighter: rgb(108, 175, 144);
+    --color-accent-lighter: rgb(122, 187, 156);
 
     --page-space: 1.25rem; /* For mobile */
     --space-section: 8rem;
@@ -357,6 +357,38 @@ button:focus-visible {
 .stack-card:hover {
     border-color: var(--color-accent);
     transform: translateY(-2px);
+}
+
+.interests {
+    padding-bottom: var(--space-section);
+}
+
+.interests h2 {
+    margin: 0 0 1.5rem;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 42rem;
+}
+
+.interest-label {
+    margin: 0 0 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-light);
+}
+
+.interest-text {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-mid);
 }
 
 .site-footer {
