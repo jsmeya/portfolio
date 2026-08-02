@@ -103,3 +103,10 @@
 .target-group + .target-group {
     margin-top: 2.5rem;
 }
+
+.disclaimer {
+    font-style: italic;
+    color: var(--color-mid);
+    max-width: 60ch;
+    line-height: 1.4;
+}
