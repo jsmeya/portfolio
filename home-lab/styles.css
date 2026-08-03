@@ -110,3 +110,110 @@
     max-width: 60ch;
     line-height: 1.4;
 }
+
+.tab-copy > * + * {
+    margin-top: 1.25rem;
+}
+
+.tab-copy h2 {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.tab-copy h2:first-child {
+    margin-top: 0;
+}
+
+.tab-copy h3 {
+    margin-top: 4rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--color-midder);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-light);
+}
+
+.tab-copy p {
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.tab-copy a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.tab-copy a:hover {
+    color: var(--color-accent-lighter);
+}
+
+.tab-list {
+    padding-left: 1.25rem;
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.tab-list li + li {
+    margin-top: 0.4rem;
+}
+
+.tab-copy code {
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.3rem;
+    background-color: var(--color-midder);
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: var(--color-light);
+}
+
+.code-block {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-midder);
+    border-radius: 0.5rem;
+    background-color: var(--color-darker);
+    overflow-x: auto;
+}
+
+.code-block code {
+    display: block;
+    width: fit-content;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    white-space: pre;
+}
+
+.code-prompt {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.info-table {
+    width: 100%;
+    max-width: 32rem;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.info-table th,
+.info-table td {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--color-midder);
+    text-align: left;
+}
+
+.info-table th {
+    color: var(--color-light);
+    font-weight: 600;
+    background-color: var(--color-midder);
+}
+
+.info-table td {
+    color: var(--color-mid);
+}

@@ -41,25 +41,63 @@
 
                 <div class="tab-panels">
                     <div class="tab-panel is-active" data-panel="setup">
-                        <p class="disclaimer">
-                            <strong>Disclaimer:</strong> This home lab is in the early stages.
-                            It is not composed of any additional hardware components other than my computer and home network.
-                        </p>
-                        <h2>Initialization</h2>
-                        <p>
-                            Installed <a href="https://www.virtualbox.org/">VirtualBox</a> on the host machine.
-                            <br>
-                            Downloaded <a href="https://www.kali.org/get-kali/#kali-virtual-machines">Kali Linux</a> as the attacker machine.
-                            <br>
-                            Downloaded <a href="https://www.rapid7.com/products/metasploit/metasploitable/">Metasploitable 2</a> as the intentionally vulnerable target machine.
-                            <br>
-                            Imported both disk images into VirtualBox and confirmed both booted correctly.
-                        </p>
-                        <h2>Network Setup</h2>
-                        <h3>VirtualBox Network Config</h3>
-                        <h3>Checking Initial State</h3>
-                        <h3>Assigning Static IPs</h3>
-                        <h3>Confirmation</h3>
+                        <div class="tab-copy">
+                            <p class="disclaimer">
+                                <strong>Disclaimer:</strong> This lab is still in its early stages. It runs entirely inside VirtualBox on a single host machine; there's no dedicated network hardware involved. Just Kali and Metasploitable2.
+                            </p>
+
+                            <h2>Initialization</h2>
+                            <ul class="tab-list">
+                                <li>Installed <a href="https://www.virtualbox.org/" target="_blank" rel="noopener">VirtualBox</a> on the host machine.</li>
+                                <li>Created two VMs: <a href="https://www.kali.org/get-kali/#kali-virtual-machines" target="_blank" rel="noopener">Kali Linux</a> as the attacker machine, and <a href="https://www.rapid7.com/products/metasploit/metasploitable/" target="_blank" rel="noopener">Metasploitable2</a> as the intentionally vulnerable target.</li>
+                                <li>Imported each VM's disk image and completed first-boot setup; default credentials on Metasploitable2, standard install/login on Kali.</li>
+                                <li>Confirmed both VMs could boot independently before touching networking.</li>
+                            </ul>
+
+                            <h2>Network Setup</h2>
+
+                            <h3>VirtualBox Network Config</h3>
+                            <p>By default, VirtualBox VMs are usually given internet access, either via NAT (routes through the host machine) or Bridged mode (the VM appears as its own device on the network).</p>
+                            <p>Alternatively, both VMs were set to <strong>Internal Network</strong> mode. This creates a private virtual switch that exists only inside VirtualBox and connects only the VMs specifically attached to it. Since MS2 is intentionally SUPER vulnerable, I cannot have it running through my home network...</p>
+                            <p>Both VMs were configured under the same internal network, named <code>labnet</code>.</p>
+
+                            <h3>Checking Initial State</h3>
+                            <p>Before assigning anything, I had to check whether either machine already had an IP on the <code>labnet</code> adapter.</p>
+                            <pre class="code-block"><code><span class="code-prompt">msfadmin@metasploitable:~$</span> ifconfig</code></pre>
+                            <p><code>eth0</code> was up but had no <code>inet</code> address, meaning no IP had been assigned yet. I had to run the same check on Kali, which also displayed no address:</p>
+                            <pre class="code-block"><code><span class="code-prompt">kali@kali:~$</span> ip addr</code></pre>
+
+                            <h3>Assigning Static IPs</h3>
+                            <p>With Internal Network mode, there's no DHCP server handing out addresses, so both machines needed manually set IPs set across the <code>255.255.255.0</code> subnet.</p>
+                            <p><strong>Metasploitable2:</strong></p>
+                            <pre class="code-block"><code><span class="code-prompt">msfadmin@metasploitable:~$</span> sudo ifconfig eth0 192.168.50.10 netmask 255.255.255.0</code></pre>
+                            <p><strong>Kali:</strong></p>
+                            <pre class="code-block"><code><span class="code-prompt">kali@kali:~$</span> sudo ip addr add 192.168.50.11/24 dev eth0</code></pre>
+                            <p>With all of that, here's each machine's address:</p>
+                            <table class="info-table">
+                                <thead>
+                                    <tr>
+                                        <th>Machine</th>
+                                        <th>IP</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Metasploitable2</td>
+                                        <td>192.168.50.10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kali</td>
+                                        <td>192.168.50.11</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h3>Confirmation</h3>
+                            <p>To confirm both machines could actually see each other on <code>labnet</code>:</p>
+                            <pre class="code-block"><code><span class="code-prompt">kali@kali:~$</span> ping 192.168.50.10</code></pre>
+                            <p>We got a reply from this ping, so we can move forward with recon.</p>
+                        </div>
                     </div>
                     <div class="tab-panel" data-panel="recon"></div>
                     <div class="tab-panel" data-panel="exploitation"></div>
