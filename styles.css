@@ -306,7 +306,7 @@ button:focus-visible {
 }
 
 .toolbox {
-    padding-block: calc(var(--space-section) / 2);
+    padding-block: calc(var(--space-section) / 4);
 }
 
 .toolbox h2 {
