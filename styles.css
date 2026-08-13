@@ -283,7 +283,7 @@ button:focus-visible {
 }
 
 .about {
-    padding-bottom: var(--space-section);
+    padding-bottom: calc(var(--space-section) / 2);
 }
 
 .about h2 {
