@@ -1,0 +1,193 @@
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 2rem;
+    color: var(--color-mid);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--color-light);
+}
+
+.project-hero {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.project-hero-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.1;
+}
+
+.project-hero-desc {
+    margin: 0;
+    max-width: 52rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-mid);
+}
+
+.project-hero-desc a {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.project-tabs-section {
+    padding-bottom: var(--space-section);
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-bottom: 1px solid var(--color-midder);
+}
+
+.tab {
+    padding: 0 0 1rem;
+    background: none;
+    border: none;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-mid);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.tab:hover {
+    color: var(--color-light);
+}
+
+.tab.is-active {
+    color: var(--color-light);
+}
+
+.tab-indicator {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
+    background-color: var(--color-accent);
+    transition: transform 0.25s ease, width 0.25s ease;
+}
+
+.tab-panel {
+    display: none;
+    margin-top: 2.5rem;
+}
+
+.tab-panel.is-active {
+    display: block;
+}
+
+.tab-empty {
+    margin: 0;
+    padding: 2rem;
+    border: 1px dashed var(--color-midder);
+    border-radius: 0.6rem;
+    color: var(--color-mid);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.target-group + .target-group {
+    margin-top: 2.5rem;
+}
+
+.tab-copy > * + * {
+    margin-top: 1.25rem;
+}
+
+.tab-copy h2 {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.tab-copy h2:first-child {
+    margin-top: 0;
+}
+
+.tab-copy h3 {
+    margin-top: 4rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--color-midder);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-light);
+}
+
+.tab-copy p {
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.tab-copy a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.tab-copy a:hover {
+    color: var(--color-accent-lighter);
+}
+
+.tab-list {
+    padding-left: 1.25rem;
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.tab-list li + li {
+    margin-top: 0.4rem;
+}
+
+.tab-copy code {
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.3rem;
+    background-color: var(--color-midder);
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    color: var(--color-accent);
+}
+
+.info-table {
+    width: 100%;
+    max-width: 32rem;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.info-table th,
+.info-table td {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--color-midder);
+    text-align: left;
+}
+
+.info-table th {
+    color: var(--color-light);
+    font-weight: 600;
+    background-color: var(--color-midder);
+}
+
+.info-table td {
+    color: var(--color-mid);
+}
