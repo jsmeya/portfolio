@@ -1,10 +1,14 @@
 const navLinks = document.querySelectorAll('.site-nav a');
+const logo = document.querySelector('.logo')
 
 const linkForSection = new Map();
 navLinks.forEach((link) => {
     const section = document.querySelector(link.getAttribute('href'));
     if (section) linkForSection.set(section, link);
 });
+
+const homeSection = document.querySelector(logo.getAttribute('href'));
+linkForSection.set(homeSection, logo)
 
 const observer = new IntersectionObserver(
     (entries) => {
