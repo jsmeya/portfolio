@@ -241,7 +241,7 @@ button:focus-visible {
 .hero {
     display: flex;
     align-items: flex-start;
-    padding-top: var(--space-section);
+    padding-block: var(--space-section);
 }
 
 .hero-inner {
@@ -283,7 +283,7 @@ button:focus-visible {
 }
 
 .about {
-    padding-top: var(--space-section);
+    padding-block: calc(var(--space-section) / 2);
 }
 
 .about h2 {
@@ -306,7 +306,7 @@ button:focus-visible {
 }
 
 .toolbox {
-    padding-top: var(--space-section);
+    padding-block: calc(var(--space-section) / 2);
 }
 
 .toolbox h2 {
@@ -361,7 +361,7 @@ button:focus-visible {
 }
 
 .projects {
-    padding-top: var(--space-section);
+    padding-block: calc(var(--space-section) / 2);
 }
 
 .projects h2 {
@@ -438,7 +438,7 @@ button:focus-visible {
 }
 
 .experience {
-    padding-top: var(--space-section);
+    padding-block: calc(var(--space-section) / 2);
 }
 
 .experience h2 {
