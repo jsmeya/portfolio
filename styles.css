@@ -26,6 +26,7 @@
 
     --page-space: 1.25rem; /* For mobile */
     --space-section: 8rem;
+    --container-max: 72rem;
 
     --font-sans: "Inter", sans-serif;
 }
@@ -46,6 +47,14 @@
     }
 }
 
+/* Large desktop */
+@media (min-width: 1600px) {
+    :root {
+        --space-section: 14rem;
+        --container-max: 78rem;
+    }
+}
+
 *,
 *::before,
 *::after {
@@ -61,6 +70,7 @@ body {
     font-family: var(--font-sans);
     color: var(--color-light);
     background-color: var(--color-base);
+    overflow-x: clip;
 }
 
 h1,
@@ -80,7 +90,7 @@ button:focus-visible {
 
 .container {
     width: 100%;
-    max-width: 72rem;
+    max-width: var(--container-max);
     margin-inline: auto;
     padding-inline: var(--page-space);
 }
@@ -98,6 +108,32 @@ button:focus-visible {
 
 .skip-link:focus-visible {
     top: 1rem;
+}
+
+.mobile-gate {
+    display: none;
+}
+
+.mobile-gate-logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--color-light);
+}
+
+.mobile-gate-message {
+    margin: 0;
+    max-width: 22rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-mid);
+}
+
+.mobile-gate-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
 .site-header {
@@ -421,7 +457,7 @@ button:focus-visible {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
     gap: 1.5rem;
     margin-top: 2.5rem;
 }
@@ -574,7 +610,7 @@ button:focus-visible {
 
 .interests-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
     gap: 2rem;
     max-width: 42rem;
 }
@@ -647,3 +683,28 @@ button:focus-visible {
 .footer-links a:hover {
     color: var(--color-light);
 }
+
+/* ===== Responsive layout ===== */
+
+/* Below tablet: the layout isn't ready, so show a holding message instead */
+@media (max-width: 767px) {
+    .skip-link,
+    .site-header,
+    #main,
+    .site-footer {
+        display: none;
+    }
+
+    .mobile-gate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+}
+
