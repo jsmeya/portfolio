@@ -361,6 +361,33 @@ button:focus-visible {
     transform: translateY(-2px);
 }
 
+.cert-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cert-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.cert-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-light);
+}
+
+.cert-date {
+    font-size: 0.8rem;
+    color: var(--color-mid);
+}
+
 .projects {
     padding-block: calc(var(--space-section) / 2);
 }
@@ -486,6 +513,12 @@ button:focus-visible {
     color: var(--color-light);
 }
 
+.experience-role span {
+    color: var(--color-mid);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
 .experience-company {
     display: inline-flex;
     align-items: center;
@@ -528,6 +561,7 @@ button:focus-visible {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--color-mid);
+    max-width: 65ch;
 }
 
 .interests {
